@@ -1,5 +1,6 @@
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { WHATSAPP_CONTACT_URL } from "@/lib/contact";
 
 export function CtaSection() {
   return (
@@ -17,21 +18,26 @@ export function CtaSection() {
           <div className="lg:col-span-8">
             <div className="mb-6 flex items-center gap-4 text-primary-foreground/60">
               <span className="h-px w-10 bg-accent" aria-hidden="true" />
-              <span className="text-[11px] tracking-[0.4em] uppercase">Próximo Passo</span>
+              <span className="text-[11px] tracking-[0.4em] uppercase">
+                Próximo Passo
+              </span>
             </div>
             <h2 className="font-serif text-balance text-4xl font-light leading-[1.05] text-primary-foreground sm:text-5xl lg:text-7xl">
               Vamos estruturar seu patrimônio com{" "}
               <em className="italic text-accent">estratégia</em>?
             </h2>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-primary-foreground/75">
-              Agende uma conversa reservada com nossos especialistas. Sem compromisso, sem fórmulas
-              prontas — apenas uma análise honesta sobre como podemos contribuir.
+              Agende uma conversa reservada com nossos especialistas. Sem
+              compromisso, sem fórmulas prontas — apenas uma análise honesta
+              sobre como podemos contribuir.
             </p>
           </div>
 
           <div className="lg:col-span-4 lg:flex lg:justify-end">
             <a
-              href="mailto:contato@asete.com.br"
+              href={WHATSAPP_CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-between gap-6 border border-accent bg-accent px-8 py-5 text-xs tracking-[0.25em] uppercase text-accent-foreground transition-colors hover:bg-primary-foreground hover:border-primary-foreground hover:text-primary"
             >
               Falar com especialista
@@ -45,22 +51,24 @@ export function CtaSection() {
             <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
               E-mail
             </p>
-            <p className="mt-3 text-sm">contato@asete.com.br</p>
+            <p className="mt-3 text-sm">contato@aseteadvisory.com.br</p>
           </div>
           <div>
             <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
               Telefone
             </p>
-            <p className="mt-3 text-sm">+55 (11) 4000-0000</p>
+            <p className="mt-3 text-sm">+55 (47) 99613-5427</p>
           </div>
           <div>
             <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
               Escritório
             </p>
-            <p className="mt-3 text-sm">Av. Brigadeiro Faria Lima — São Paulo</p>
+            <p className="mt-3 text-sm">
+              R. Min. Calógeras, 343 - Bucarein, Joinville - SC, 89221-031
+            </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

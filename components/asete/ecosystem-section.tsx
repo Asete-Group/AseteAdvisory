@@ -15,22 +15,22 @@ type Pillar = {
 
 const PILLARS: Pillar[] = [
   {
-    id: "investimentos",
+    id: "consultoria",
     index: "01",
+    title: "Consultoria",
+    short: "Planejamento patrimonial integrado",
+    description:
+      "Diagnóstico, estratégia e acompanhamento contínuo. Um conselheiro permanente para decisões de alta relevância.",
+    icon: Home,
+  },
+  {
+    id: "investimentos",
+    index: "02",
     title: "Investimentos",
     short: "Alocação estratégica e diversificação inteligente",
     description:
       "Carteiras desenhadas sob medida, com foco em preservação de capital, performance ajustada ao risco e diversificação global.",
     icon: TrendingUp,
-  },
-  {
-    id: "consorcios",
-    index: "02",
-    title: "Consórcios",
-    short: "Ferramenta estratégica de aquisição e capital",
-    description:
-      "Estruturas de consórcio como instrumento de planejamento financeiro — não apenas de compra, mas de alavancagem e proteção.",
-    icon: Briefcase,
   },
   {
     id: "imoveis",
@@ -51,13 +51,13 @@ const PILLARS: Pillar[] = [
     icon: ShieldCheck,
   },
   {
-    id: "consultoria",
+    id: "consorcios",
     index: "05",
-    title: "Consultoria",
-    short: "Planejamento patrimonial integrado",
+    title: "Consórcios",
+    short: "Ferramenta estratégica de aquisição e capital",
     description:
-      "Diagnóstico, estratégia e acompanhamento contínuo. Um conselheiro permanente para decisões de alta relevância.",
-    icon: Home,
+      "Estruturas de consórcio como instrumento de planejamento financeiro — não apenas de compra, mas de alavancagem e proteção.",
+    icon: Briefcase,
   },
 ]
 

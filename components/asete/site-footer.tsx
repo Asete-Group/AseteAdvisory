@@ -5,14 +5,16 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="flex items-baseline gap-3">
-              <span className="font-serif text-3xl tracking-[0.18em] text-primary">ASETE</span>
+              <span className="font-serif text-3xl tracking-[0.18em] text-primary">
+                ASETE
+              </span>
               <span className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
                 Advisory
               </span>
             </div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Consultoria patrimonial independente. Estratégia, proteção e crescimento para
-              empresários e investidores.
+              Consultoria patrimonial independente. Estratégia, proteção e
+              crescimento para empresários e investidores.
             </p>
           </div>
 
@@ -49,11 +51,11 @@ export function SiteFooter() {
               CIISC
             </p>
             <ul className="mt-5 space-y-3 text-sm text-foreground/85">
+              <li>Consultoria</li>
               <li>Investimentos</li>
-              <li>Consórcios</li>
               <li>Imóveis</li>
               <li>Seguros</li>
-              <li>Consultoria</li>
+              <li>Consórcios</li>
             </ul>
           </div>
 
@@ -62,15 +64,20 @@ export function SiteFooter() {
               Contato
             </p>
             <ul className="mt-5 space-y-3 text-sm text-foreground/85">
-              <li>contato@asete.com.br</li>
-              <li>+55 (11) 4000-0000</li>
-              <li>Av. Brigadeiro Faria Lima · São Paulo</li>
+              <li>contato@aseteadvisory.com.br</li>
+              <li>+55 (47) 99613-5427</li>
+              <li>
+                R. Min. Calógeras, 343 - Bucarein, Joinville - SC, 89221-031
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} ASETE Advisory. Todos os direitos reservados.</p>
+          <p>
+            © {new Date().getFullYear()} ASETE Advisory. Todos os direitos
+            reservados.
+          </p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary">
               Política de Privacidade
@@ -82,5 +89,5 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

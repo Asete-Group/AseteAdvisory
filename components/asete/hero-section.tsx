@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
+import { WHATSAPP_CONTACT_URL } from "@/lib/contact"
 
 export function HeroSection() {
   return (
@@ -38,7 +39,9 @@ export function HeroSection() {
 
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <a
-              href="#contato"
+              href={WHATSAPP_CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-primary-foreground px-7 py-4 text-xs tracking-[0.25em] uppercase text-primary transition-colors hover:bg-accent hover:text-accent-foreground"
             >
               Falar com especialista

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
+import { WHATSAPP_CONTACT_URL } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 const NAV_LINKS = [
@@ -71,7 +72,9 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#contato"
+            href={WHATSAPP_CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               "hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-xs tracking-[0.2em] uppercase border transition-colors",
               scrolled
@@ -116,7 +119,9 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            href="#contato"
+            href={WHATSAPP_CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="mt-4 inline-flex items-center justify-center px-5 py-3 text-xs tracking-[0.2em] uppercase border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
           >
