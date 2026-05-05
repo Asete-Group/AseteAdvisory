@@ -1,0 +1,71 @@
+import Image from "next/image"
+import { ArrowRight } from "lucide-react"
+
+export function HeroSection() {
+  return (
+    <section id="top" className="relative isolate min-h-screen w-full overflow-hidden">
+      <Image
+        src="/images/hero-skyline.jpg"
+        alt="Skyline financeiro ao entardecer"
+        fill
+        priority
+        className="object-cover"
+      />
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-primary/70" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/50 to-primary/95"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-20 pt-40 lg:px-10 lg:pb-28 lg:pt-44">
+        <div className="mb-10 flex items-center gap-4 text-primary-foreground/70">
+          <span className="h-px w-12 bg-accent" aria-hidden="true" />
+          <span className="text-[11px] tracking-[0.4em] uppercase">Consultoria Patrimonial</span>
+        </div>
+
+        <h1 className="font-serif text-balance text-primary-foreground text-5xl font-light leading-[1.05] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+          Estratégia, proteção
+          <br className="hidden sm:block" /> e <em className="italic font-light text-accent">crescimento</em>
+          <br className="hidden sm:block" /> do seu patrimônio.
+        </h1>
+
+        <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <p className="max-w-xl text-pretty text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+            Soluções completas para empresários e investidores que buscam segurança, performance e
+            visão estratégica de longo prazo.
+          </p>
+
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <a
+              href="#contato"
+              className="group inline-flex items-center gap-3 bg-primary-foreground px-7 py-4 text-xs tracking-[0.25em] uppercase text-primary transition-colors hover:bg-accent hover:text-accent-foreground"
+            >
+              Falar com especialista
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href="#sobre"
+              className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-primary-foreground/80 hover:text-primary-foreground"
+            >
+              Conhecer a Asete
+            </a>
+          </div>
+        </div>
+
+        {/* Footer rail */}
+        <div className="mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-primary-foreground/15 pt-8 text-[11px] tracking-[0.3em] uppercase text-primary-foreground/60">
+          <span>Ecossistema CIISC</span>
+          <div className="hidden md:flex items-center gap-8">
+            <span>Investimentos</span>
+            <span>Consórcios</span>
+            <span>Imóveis</span>
+            <span>Seguros</span>
+            <span>Consultoria</span>
+          </div>
+          <span className="hidden md:inline">São Paulo · Brasil</span>
+        </div>
+      </div>
+    </section>
+  )
+}
