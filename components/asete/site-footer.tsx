@@ -65,7 +65,6 @@ export function SiteFooter() {
             </p>
             <ul className="mt-5 space-y-3 text-sm text-foreground/85">
               <li>contato@aseteadvisory.com.br</li>
-              <li>+55 (47) 99613-5427</li>
               <li>
                 R. Min. Calógeras, 343 - Bucarein, Joinville - SC, 89221-031
               </li>
