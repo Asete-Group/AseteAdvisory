@@ -13,8 +13,8 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Consultoria patrimonial independente. Estratégia, proteção e
-              crescimento para empresários e investidores.
+              Estruturação patrimonial e financeira para empresários,
+              investidores e famílias que valorizam visão de longo prazo.
             </p>
           </div>
 

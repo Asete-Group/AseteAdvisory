@@ -26,15 +26,15 @@ export function HeroSection() {
         </div>
 
         <h1 className="font-serif text-balance text-primary-foreground text-5xl font-light leading-[1.05] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
-          Estratégia, proteção
-          <br className="hidden sm:block" /> e <em className="italic font-light text-accent">crescimento</em>
-          <br className="hidden sm:block" /> do seu patrimônio.
+          Clareza, proteção
+          <br className="hidden sm:block" /> e <em className="italic font-light text-accent">construção</em>
+          <br className="hidden sm:block" /> patrimonial.
         </h1>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <p className="max-w-xl text-pretty text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
             Soluções completas para empresários e investidores que buscam segurança, performance e
-            visão estratégica de longo prazo.
+            visão consolidada de longo prazo.
           </p>
 
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
@@ -42,9 +42,9 @@ export function HeroSection() {
               href={WHATSAPP_CONTACT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 bg-primary-foreground px-7 py-4 text-xs tracking-[0.25em] uppercase text-primary transition-colors hover:bg-accent hover:text-accent-foreground"
+              className="group inline-flex items-center gap-3 whitespace-nowrap bg-primary-foreground px-7 py-4 text-xs tracking-[0.14em] uppercase text-primary transition-colors hover:bg-accent hover:text-accent-foreground sm:tracking-[0.2em]"
             >
-              Falar com especialista
+              Solicitar análise personalizada
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
@@ -66,7 +66,6 @@ export function HeroSection() {
             <span>Seguros</span>
             <span>Consórcios</span>
           </div>
-          <span className="hidden md:inline">Joinville · Brasil</span>
         </div>
       </div>
     </section>

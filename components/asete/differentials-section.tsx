@@ -11,13 +11,13 @@ const ITEMS = [
     icon: Layers,
     title: "Estrutura completa",
     description:
-      "Cinco frentes sob a mesma curadoria — Investimentos, Consórcios, Imóveis, Seguros e Consultoria.",
+      "Cinco frentes sob a mesma curadoria: Consultoria, Investimentos, Imóveis, Seguros e Consórcios.",
   },
   {
     icon: ScrollText,
     title: "Planejamento patrimonial",
     description:
-      "Estratégia, sucessão e proteção integradas em um único plano de longo prazo.",
+      "Sucessão, proteção e evolução patrimonial integradas em um único plano de longo prazo.",
   },
 ]
 

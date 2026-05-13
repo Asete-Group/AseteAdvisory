@@ -71,13 +71,13 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-xs tracking-[0.2em] uppercase border transition-colors",
+              "hidden md:inline-flex items-center gap-2 whitespace-nowrap px-4 py-2.5 text-xs tracking-[0.12em] uppercase border transition-colors xl:px-5 xl:tracking-[0.16em]",
               scrolled
                 ? "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 : "border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary",
             )}
           >
-            Falar com especialista
+            Solicitar análise personalizada
           </a>
 
           <button
@@ -118,9 +118,9 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-4 inline-flex items-center justify-center px-5 py-3 text-xs tracking-[0.2em] uppercase border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="mt-4 inline-flex items-center justify-center px-5 py-3 text-xs tracking-[0.12em] uppercase border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
           >
-            Falar com especialista
+            Solicitar análise personalizada
           </a>
         </nav>
       </div>

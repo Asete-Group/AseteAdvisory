@@ -7,9 +7,9 @@ const STEPS = [
   },
   {
     number: "II",
-    title: "Estratégia",
+    title: "Estruturação",
     description:
-      "Plano patrimonial sob medida, com alocação coordenada entre as cinco frentes do CIISC.",
+      "Organização patrimonial desenvolvida de forma integrada entre as áreas do CIISC.",
   },
   {
     number: "III",

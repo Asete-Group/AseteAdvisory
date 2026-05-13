@@ -17,9 +17,9 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "ASETE Advisory — Estratégia, proteção e crescimento do seu patrimônio",
+  title: "ASETE Advisory | Clareza, proteção e construção patrimonial",
   description:
-    "Consultoria independente para empresários e investidores. Soluções completas em investimentos, consórcios, imóveis, seguros e planejamento patrimonial.",
+    "Consultoria independente para empresários e investidores. Soluções completas em consultoria, investimentos, imóveis, seguros e consórcios.",
   generator: "v0.app",
   icons: {
     icon: [

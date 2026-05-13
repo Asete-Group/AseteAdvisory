@@ -22,8 +22,8 @@ const PILLARS: Pillar[] = [
     title: "Consultoria",
     short: "Planejamento patrimonial integrado",
     description:
-      "Diagnóstico, estratégia e acompanhamento contínuo. Um conselheiro permanente para decisões de alta relevância.",
-    icon: Home,
+      "Diagnóstico, clareza e acompanhamento contínuo. Um conselheiro permanente para decisões de alta relevância.",
+    icon: Building2,
     letter: "C",
     heightClass: "lg:h-[22rem]",
   },
@@ -31,7 +31,7 @@ const PILLARS: Pillar[] = [
     id: "investimentos",
     index: "02",
     title: "Investimentos",
-    short: "Alocação estratégica e diversificação inteligente",
+    short: "Alocação criteriosa e diversificação inteligente",
     description:
       "Carteiras desenhadas sob medida, com foco em preservação de capital, performance ajustada ao risco e diversificação global.",
     icon: TrendingUp,
@@ -45,7 +45,7 @@ const PILLARS: Pillar[] = [
     short: "Investimento imobiliário com inteligência patrimonial",
     description:
       "Curadoria de oportunidades imobiliárias, análise de viabilidade e estruturação de operações para investidores qualificados.",
-    icon: Building2,
+    icon: Home,
     letter: "I",
     heightClass: "lg:h-[15.5rem]",
   },
@@ -64,9 +64,9 @@ const PILLARS: Pillar[] = [
     id: "consorcios",
     index: "05",
     title: "Consórcios",
-    short: "Ferramenta estratégica de aquisição e capital",
+    short: "Ferramenta planejada de aquisição e capital",
     description:
-      "Estruturas de consórcio como instrumento de planejamento financeiro — não apenas de compra, mas de alavancagem e proteção.",
+      "Estruturas de consórcio como instrumento de planejamento financeiro, indo além da compra para apoiar alavancagem e proteção.",
     icon: Briefcase,
     letter: "C",
     heightClass: "lg:h-[22rem]",
@@ -87,9 +87,9 @@ export function EcosystemSection() {
               <span className="text-[11px] tracking-[0.4em] uppercase">Nosso Ecossistema</span>
             </div>
             <h2 className="font-serif text-balance text-4xl font-light leading-[1.05] sm:text-5xl lg:text-6xl">
-              CIISC — cinco frentes,
+              CIISC: cinco frentes,
               <br />
-              uma <em className="italic text-accent">única estratégia</em>.
+              uma <em className="italic text-accent">visão consolidada</em>.
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">
@@ -127,10 +127,7 @@ export function EcosystemSection() {
                   )}
                   aria-pressed={isActive}
                 >
-                  <div className="absolute inset-x-5 top-5 flex items-center justify-between">
-                    <span className="font-mono text-[10px] tracking-[0.3em] text-primary-foreground/45">
-                      {pillar.index}
-                    </span>
+                  <div className="absolute inset-x-5 top-5 flex items-center justify-end">
                     <span
                       className={cn(
                         "inline-flex h-10 w-10 items-center justify-center border transition-all",

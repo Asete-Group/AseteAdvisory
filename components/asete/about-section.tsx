@@ -14,7 +14,7 @@ export function AboutSection() {
             </div>
             <h2 className="font-serif text-balance text-4xl font-light leading-[1.1] text-primary sm:text-5xl lg:text-6xl">
               Uma consultoria <em className="italic">independente</em>,
-              construída sobre confiança e visão estratégica.
+              voltada à proteção, clareza e evolução patrimonial.
             </h2>
           </div>
 
@@ -42,7 +42,7 @@ export function AboutSection() {
           </div>
           <div>
             <p className="font-serif text-2xl text-primary leading-snug">
-              Visão estratégica
+              Visão consolidada
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Construímos planos patrimoniais que equilibram preservação,
@@ -54,7 +54,7 @@ export function AboutSection() {
               Ecossistema CIISC
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Investimentos, Consórcios, Imóveis, Seguros e Consultoria
+              Consultoria, Investimentos, Imóveis, Seguros e Consórcios
               integrados em uma única estrutura coordenada.
             </p>
           </div>

@@ -23,12 +23,12 @@ export function CtaSection() {
               </span>
             </div>
             <h2 className="font-serif text-balance text-4xl font-light leading-[1.05] text-primary-foreground sm:text-5xl lg:text-7xl">
-              Vamos estruturar seu patrimônio com{" "}
-              <em className="italic text-accent">estratégia</em>?
+              Vamos organizar seu patrimônio de forma mais{" "}
+              <em className="italic text-accent">sólida e consciente</em>?
             </h2>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-primary-foreground/75">
               Agende uma conversa reservada com nossos especialistas. Sem
-              compromisso, sem fórmulas prontas — apenas uma análise honesta
+              compromisso e sem fórmulas prontas, com uma análise honesta
               sobre como podemos contribuir.
             </p>
           </div>
@@ -38,9 +38,9 @@ export function CtaSection() {
               href={WHATSAPP_CONTACT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-between gap-6 border border-accent bg-accent px-8 py-5 text-xs tracking-[0.25em] uppercase text-accent-foreground transition-colors hover:bg-primary-foreground hover:border-primary-foreground hover:text-primary"
+              className="group inline-flex items-center justify-between gap-6 whitespace-nowrap border border-accent bg-accent px-8 py-5 text-xs tracking-[0.14em] uppercase text-accent-foreground transition-colors hover:bg-primary-foreground hover:border-primary-foreground hover:text-primary sm:tracking-[0.2em]"
             >
-              Falar com especialista
+              Solicitar análise personalizada
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

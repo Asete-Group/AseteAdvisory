@@ -15,7 +15,7 @@ const PROFILES = [
     label: "03",
     title: "Investidores",
     description:
-      "Que já acumularam patrimônio relevante e desejam uma visão consolidada, independente e estratégica.",
+      "Que já acumularam patrimônio relevante e desejam uma visão consolidada, independente e criteriosa.",
   },
 ]
 
