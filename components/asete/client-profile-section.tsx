@@ -44,8 +44,7 @@ export function ClientProfileSection() {
         <div className="mt-20 grid gap-12 lg:grid-cols-3 lg:gap-16">
           {PROFILES.map((profile) => (
             <article key={profile.label} className="border-t border-border pt-8">
-              <span className="font-mono text-[11px] tracking-[0.3em] text-accent">{profile.label}</span>
-              <h3 className="mt-6 font-serif text-3xl font-light text-primary lg:text-4xl">
+              <h3 className="font-serif text-3xl font-light text-primary lg:text-4xl">
                 {profile.title}
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">

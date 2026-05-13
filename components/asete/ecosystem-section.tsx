@@ -226,7 +226,7 @@ export function EcosystemSection() {
                   type="button"
                   onClick={() => openPillar(pillar)}
                   className={cn(
-                    "group relative min-h-[16rem] w-full overflow-hidden rounded-sm border text-left transition-all duration-300 sm:min-h-[18rem] lg:min-h-0",
+                    "group relative min-h-[10.5rem] w-full overflow-hidden rounded-sm border text-left transition-all duration-300 sm:min-h-[12rem] lg:min-h-0",
                     pillar.heightClass,
                     isActive
                       ? "border-accent/70 bg-primary-foreground/[0.08] text-primary-foreground shadow-[0_24px_80px_rgba(0,0,0,0.22)]"
@@ -237,20 +237,20 @@ export function EcosystemSection() {
                   <div className="absolute inset-x-5 top-5 flex items-center justify-end">
                     <span
                       className={cn(
-                        "inline-flex h-10 w-10 items-center justify-center border transition-all",
+                        "inline-flex h-8 w-8 items-center justify-center border transition-all sm:h-9 sm:w-9 lg:h-10 lg:w-10",
                         isActive
                           ? "border-accent text-accent"
                           : "border-primary-foreground/20 text-primary-foreground/40 group-hover:border-primary-foreground/40",
                       )}
                     >
-                      <Icon className="size-4" />
+                      <Icon className="size-3.5 lg:size-4" />
                     </span>
                   </div>
 
-                  <div className="absolute inset-x-5 top-16 bottom-20 flex items-center justify-center">
+                  <div className="absolute inset-x-5 top-10 bottom-14 flex items-center justify-center sm:top-12 sm:bottom-16 lg:top-16 lg:bottom-20">
                     <span
                       className={cn(
-                        "font-serif text-[7rem] font-light leading-none tracking-normal transition-colors sm:text-[8rem] lg:text-[clamp(5.75rem,8vw,8.5rem)]",
+                        "font-serif text-[4.75rem] font-light leading-none tracking-normal transition-colors sm:text-[5.75rem] lg:text-[clamp(5.75rem,8vw,8.5rem)]",
                         isActive ? "text-accent" : "text-primary-foreground",
                       )}
                     >
@@ -260,11 +260,11 @@ export function EcosystemSection() {
 
                   <div
                     className={cn(
-                      "absolute inset-x-5 bottom-5 border-t pt-4 transition-colors",
+                      "absolute inset-x-5 bottom-4 border-t pt-3 transition-colors lg:bottom-5 lg:pt-4",
                       isActive ? "border-accent/50" : "border-primary-foreground/15",
                     )}
                   >
-                    <p className="text-center text-[10px] font-semibold tracking-[0.18em] uppercase sm:text-[11px] sm:tracking-[0.22em] lg:tracking-[0.24em]">
+                    <p className="text-center text-[10px] font-semibold tracking-[0.16em] uppercase sm:text-[11px] sm:tracking-[0.2em] lg:tracking-[0.24em]">
                       {pillar.title}
                     </p>
                   </div>
