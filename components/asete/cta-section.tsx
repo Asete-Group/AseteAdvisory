@@ -45,29 +45,6 @@ export function CtaSection() {
             </a>
           </div>
         </div>
-
-        <div className="mt-20 grid gap-10 border-t border-primary-foreground/15 pt-10 text-primary-foreground/70 sm:grid-cols-3">
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
-              E-mail
-            </p>
-            <p className="mt-3 text-sm">contato@aseteadvisory.com.br</p>
-          </div>
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
-              Telefone
-            </p>
-            <p className="mt-3 text-sm">+55 (47) 99613-5427</p>
-          </div>
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
-              Escritório
-            </p>
-            <p className="mt-3 text-sm">
-              R. Min. Calógeras, 343 - Bucarein, Joinville - SC, 89221-031
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -60,13 +60,13 @@ export function HeroSection() {
         <div className="mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-primary-foreground/15 pt-8 text-[11px] tracking-[0.3em] uppercase text-primary-foreground/60">
           <span>Ecossistema CIISC</span>
           <div className="hidden md:flex items-center gap-8">
+            <span>Consultoria</span>
             <span>Investimentos</span>
-            <span>Consórcios</span>
             <span>Imóveis</span>
             <span>Seguros</span>
-            <span>Consultoria</span>
+            <span>Consórcios</span>
           </div>
-          <span className="hidden md:inline">São Paulo · Brasil</span>
+          <span className="hidden md:inline">Joinville · Brasil</span>
         </div>
       </div>
     </section>

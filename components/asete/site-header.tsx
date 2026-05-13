@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { WHATSAPP_CONTACT_URL } from "@/lib/contact"
@@ -34,23 +35,17 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#top" className="flex items-baseline gap-2" aria-label="ASETE Advisory">
-          <span
+        <a href="#top" className="relative block h-9 w-56" aria-label="ASETE Advisory">
+          <Image
+            src="/images/logo-asete.png"
+            alt="ASETE Advisory"
+            fill
+            priority
             className={cn(
-              "font-serif text-2xl tracking-[0.18em] transition-colors",
-              scrolled ? "text-primary" : "text-primary-foreground",
+              "object-contain object-left transition-[filter,opacity]",
+              scrolled ? "opacity-90" : "invert brightness-0 opacity-95",
             )}
-          >
-            ASETE
-          </span>
-          <span
-            className={cn(
-              "text-[10px] tracking-[0.4em] uppercase transition-colors",
-              scrolled ? "text-muted-foreground" : "text-primary-foreground/70",
-            )}
-          >
-            Advisory
-          </span>
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-10">
