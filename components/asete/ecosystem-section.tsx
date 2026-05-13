@@ -2,7 +2,20 @@
 
 import { useState } from "react"
 import { ArrowUpRight, TrendingUp, Building2, Home, ShieldCheck, Briefcase } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
+import { buildWhatsAppContactUrl } from "@/lib/contact"
 import { cn } from "@/lib/utils"
+
+type Offering = {
+  title: string
+  description: string
+}
 
 type Pillar = {
   id: string
@@ -13,6 +26,7 @@ type Pillar = {
   icon: React.ComponentType<{ className?: string }>
   letter: string
   heightClass: string
+  offerings: Offering[]
 }
 
 const PILLARS: Pillar[] = [
@@ -26,6 +40,23 @@ const PILLARS: Pillar[] = [
     icon: Building2,
     letter: "C",
     heightClass: "lg:h-[22rem]",
+    offerings: [
+      {
+        title: "Aviação Corporativa e Executiva",
+        description:
+          "Apoio consultivo para decisões envolvendo aeronaves corporativas, com análise de uso, estruturação, custos operacionais e aderência ao patrimônio da família ou empresa.",
+      },
+      {
+        title: "Commodities",
+        description:
+          "Leitura e organização de oportunidades ligadas a commodities, conectando análise comercial, riscos financeiros e objetivos patrimoniais de médio e longo prazo.",
+      },
+      {
+        title: "Importações & Exportações",
+        description:
+          "Consultoria para operações internacionais, com foco em viabilidade, proteção de capital, fluxo financeiro e integração das decisões ao planejamento patrimonial.",
+      },
+    ],
   },
   {
     id: "investimentos",
@@ -37,6 +68,23 @@ const PILLARS: Pillar[] = [
     icon: TrendingUp,
     letter: "I",
     heightClass: "lg:h-[18rem]",
+    offerings: [
+      {
+        title: "Fundos de Investimento",
+        description:
+          "Curadoria de fundos alinhados ao perfil do investidor, considerando diversificação, liquidez, risco, horizonte de investimento e papel de cada posição no patrimônio.",
+      },
+      {
+        title: "Previdência Privada",
+        description:
+          "Estruturação de previdência com foco em eficiência, sucessão e disciplina de longo prazo, integrada aos demais instrumentos patrimoniais do cliente.",
+      },
+      {
+        title: "Renda Fixa e Renda Variável",
+        description:
+          "Construção de alocações que combinam previsibilidade, potencial de valorização e controle de risco, respeitando objetivos pessoais, familiares e empresariais.",
+      },
+    ],
   },
   {
     id: "imoveis",
@@ -48,6 +96,23 @@ const PILLARS: Pillar[] = [
     icon: Home,
     letter: "I",
     heightClass: "lg:h-[15.5rem]",
+    offerings: [
+      {
+        title: "Leilões",
+        description:
+          "Análise de oportunidades em leilões imobiliários, com avaliação de risco jurídico, potencial financeiro, liquidez e compatibilidade com a estratégia patrimonial.",
+      },
+      {
+        title: "Terrenos",
+        description:
+          "Curadoria e avaliação de terrenos para aquisição, desenvolvimento ou reserva patrimonial, considerando localização, documentação, vocação e horizonte de valorização.",
+      },
+      {
+        title: "Crédito com Garantia",
+        description:
+          "Estruturação de crédito com garantia imobiliária para apoiar liquidez, reorganização financeira ou projetos específicos sem perder a visão de preservação patrimonial.",
+      },
+    ],
   },
   {
     id: "seguros",
@@ -59,6 +124,23 @@ const PILLARS: Pillar[] = [
     icon: ShieldCheck,
     letter: "S",
     heightClass: "lg:h-[19.5rem]",
+    offerings: [
+      {
+        title: "Vida e Sucessão Patrimonial",
+        description:
+          "Planejamento de proteção pessoal e sucessória para reduzir impactos financeiros em eventos inesperados e preservar a continuidade familiar e empresarial.",
+      },
+      {
+        title: "Aeronaves e Embarcações",
+        description:
+          "Análise e estruturação de seguros para ativos de alto valor, com atenção a uso, operação, exposição a riscos e adequação das coberturas contratadas.",
+      },
+      {
+        title: "Automóvel e Residencial",
+        description:
+          "Organização de proteções essenciais para bens pessoais, buscando coberturas coerentes, bom atendimento e integração com a gestão patrimonial do cliente.",
+      },
+    ],
   },
   {
     id: "consorcios",
@@ -70,12 +152,39 @@ const PILLARS: Pillar[] = [
     icon: Briefcase,
     letter: "C",
     heightClass: "lg:h-[22rem]",
+    offerings: [
+      {
+        title: "Aeronaves e Embarcações",
+        description:
+          "Uso planejado de consórcios para aquisição de aeronaves e embarcações, preservando liquidez e organizando o investimento dentro de um plano financeiro maior.",
+      },
+      {
+        title: "Cartas Contempladas",
+        description:
+          "Análise de cartas contempladas para aquisição ou estruturação patrimonial, avaliando custo, prazo, oportunidade e aderência aos objetivos do cliente.",
+      },
+      {
+        title: "Agronegócio",
+        description:
+          "Estruturas de consórcio voltadas ao agronegócio, com foco em equipamentos, expansão, capitalização e organização financeira para ciclos produtivos.",
+      },
+    ],
   },
 ]
 
 export function EcosystemSection() {
   const [active, setActive] = useState<string>(PILLARS[0].id)
+  const [selectedPillarId, setSelectedPillarId] = useState<string | null>(null)
+  const [selectedOffering, setSelectedOffering] = useState(0)
   const current = PILLARS.find((p) => p.id === active) ?? PILLARS[0]
+  const selectedPillar = PILLARS.find((p) => p.id === selectedPillarId) ?? null
+  const currentOffering = selectedPillar?.offerings[selectedOffering]
+
+  const openPillar = (pillar: Pillar) => {
+    setActive(pillar.id)
+    setSelectedPillarId(pillar.id)
+    setSelectedOffering(0)
+  }
 
   return (
     <section id="ecossistema" className="relative bg-primary text-primary-foreground py-24 lg:py-36">
@@ -115,9 +224,7 @@ export function EcosystemSection() {
                 <button
                   key={pillar.id}
                   type="button"
-                  onMouseEnter={() => setActive(pillar.id)}
-                  onFocus={() => setActive(pillar.id)}
-                  onClick={() => setActive(pillar.id)}
+                  onClick={() => openPillar(pillar)}
                   className={cn(
                     "group relative min-h-[16rem] w-full overflow-hidden rounded-sm border text-left transition-all duration-300 sm:min-h-[18rem] lg:min-h-0",
                     pillar.heightClass,
@@ -180,7 +287,11 @@ export function EcosystemSection() {
               <p className="text-base leading-relaxed text-primary-foreground/85">{current.description}</p>
               <a
                 href="#contato"
-                className="mt-8 inline-flex items-center gap-2 border-b border-accent pb-1 text-xs tracking-[0.25em] uppercase text-accent transition-colors hover:border-primary-foreground hover:text-primary-foreground"
+                onClick={(event) => {
+                  event.preventDefault()
+                  openPillar(current)
+                }}
+                className="mt-8 inline-flex cursor-pointer items-center gap-2 border-b border-accent pb-1 text-xs tracking-[0.25em] uppercase text-accent transition-colors hover:border-primary-foreground hover:text-primary-foreground"
               >
                 Saber mais
                 <ArrowUpRight className="size-3.5" />
@@ -189,6 +300,86 @@ export function EcosystemSection() {
           </div>
         </div>
       </div>
+
+      <Dialog
+        open={selectedPillar !== null}
+        onOpenChange={(open) => {
+          if (!open) {
+            setSelectedPillarId(null)
+          }
+        }}
+      >
+        <DialogContent className="max-h-[calc(100vh-2rem)] overflow-y-auto border-accent/30 bg-primary p-0 text-primary-foreground shadow-2xl sm:max-w-4xl">
+          {selectedPillar && currentOffering ? (
+            <div className="grid gap-0 md:grid-cols-[18rem_1fr]">
+              <div className="border-b border-primary-foreground/10 bg-primary-foreground/[0.04] p-6 md:border-b-0 md:border-r">
+                <DialogHeader>
+                  <span className="font-mono text-[11px] tracking-[0.35em] text-accent">
+                    CIISC
+                  </span>
+                  <DialogTitle className="font-serif text-4xl font-light text-primary-foreground">
+                    {selectedPillar.title}
+                  </DialogTitle>
+                  <DialogDescription className="text-sm leading-relaxed text-primary-foreground/65">
+                    Escolha uma frente para conhecer em mais detalhes.
+                  </DialogDescription>
+                </DialogHeader>
+
+                <div className="mt-8 grid gap-3">
+                  {selectedPillar.offerings.map((offering, index) => (
+                    <button
+                      key={offering.title}
+                      type="button"
+                      onClick={() => setSelectedOffering(index)}
+                      className={cn(
+                        "rounded-sm border px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.14em] transition-colors",
+                        selectedOffering === index
+                          ? "border-accent bg-accent text-accent-foreground"
+                          : "border-primary-foreground/15 bg-primary-foreground/[0.04] text-primary-foreground/75 hover:border-primary-foreground/35 hover:text-primary-foreground",
+                      )}
+                    >
+                      {offering.title}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8 md:p-10">
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="font-mono text-[11px] tracking-[0.3em] text-accent">
+                      {String(selectedOffering + 1).padStart(2, "0")} / 03
+                    </p>
+                    <h3 className="mt-5 font-serif text-4xl font-light leading-tight text-primary-foreground sm:text-5xl">
+                      {currentOffering.title}
+                    </h3>
+                  </div>
+                  <span className="hidden shrink-0 font-serif text-7xl font-light leading-none text-accent/80 sm:block">
+                    {selectedPillar.letter}
+                  </span>
+                </div>
+
+                <p className="mt-8 max-w-2xl text-base leading-relaxed text-primary-foreground/78 sm:text-lg">
+                  {currentOffering.description}
+                </p>
+
+                <a
+                  href={buildWhatsAppContactUrl(
+                    `Olá, equipe ASETE. Tenho interesse em entender melhor como ${currentOffering.title} pode contribuir para minha organização patrimonial. Podemos conversar sobre essa frente de ${selectedPillar.title}?`,
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setSelectedPillarId(null)}
+                  className="mt-10 inline-flex items-center gap-2 border-b border-accent pb-1 text-xs tracking-[0.22em] uppercase text-accent transition-colors hover:border-primary-foreground hover:text-primary-foreground"
+                >
+                  Solicitar análise personalizada
+                  <ArrowUpRight className="size-3.5" />
+                </a>
+              </div>
+            </div>
+          ) : null}
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }
