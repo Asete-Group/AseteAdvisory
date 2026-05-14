@@ -11,7 +11,7 @@ const ITEMS = [
     icon: Layers,
     title: "Estrutura completa",
     description:
-      "Cinco frentes sob a mesma curadoria: Consultoria, Investimentos, Imóveis, Seguros e Consórcios.",
+      "Cinco pilares sob a mesma curadoria: Consultoria, Investimentos, Imóveis, Seguros e Consórcios.",
   },
   {
     icon: ScrollText,

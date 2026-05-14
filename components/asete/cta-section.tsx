@@ -38,9 +38,9 @@ export function CtaSection() {
               href={WHATSAPP_CONTACT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-between gap-6 whitespace-nowrap border border-accent bg-accent px-8 py-5 text-xs tracking-[0.14em] uppercase text-accent-foreground transition-colors hover:bg-primary-foreground hover:border-primary-foreground hover:text-primary sm:tracking-[0.2em]"
+              className="group inline-flex w-full max-w-full items-center justify-between gap-4 border border-accent bg-accent px-5 py-5 text-[11px] uppercase tracking-[0.1em] text-accent-foreground transition-colors hover:bg-primary-foreground hover:border-primary-foreground hover:text-primary sm:w-auto sm:gap-6 sm:whitespace-nowrap sm:px-8 sm:text-xs sm:tracking-[0.2em]"
             >
-              Solicitar análise personalizada
+              <span>Solicitar análise personalizada</span>
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

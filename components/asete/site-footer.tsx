@@ -29,8 +29,8 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href="#ecossistema" className="hover:text-primary">
-                  Ecossistema
+                <a href="#pilares" className="hover:text-primary">
+                  Pilares
                 </a>
               </li>
               <li>

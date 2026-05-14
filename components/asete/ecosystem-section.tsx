@@ -176,7 +176,6 @@ export function EcosystemSection() {
   const [active, setActive] = useState<string>(PILLARS[0].id)
   const [selectedPillarId, setSelectedPillarId] = useState<string | null>(null)
   const [selectedOffering, setSelectedOffering] = useState(0)
-  const current = PILLARS.find((p) => p.id === active) ?? PILLARS[0]
   const selectedPillar = PILLARS.find((p) => p.id === selectedPillarId) ?? null
   const currentOffering = selectedPillar?.offerings[selectedOffering]
 
@@ -187,16 +186,16 @@ export function EcosystemSection() {
   }
 
   return (
-    <section id="ecossistema" className="relative bg-primary text-primary-foreground py-24 lg:py-36">
+    <section id="pilares" className="relative bg-primary text-primary-foreground py-24 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <div className="mb-6 flex items-center gap-4 text-primary-foreground/60">
               <span className="h-px w-10 bg-accent" aria-hidden="true" />
-              <span className="text-[11px] tracking-[0.4em] uppercase">Nosso Ecossistema</span>
+              <span className="text-[11px] tracking-[0.4em] uppercase">Nossos Pilares</span>
             </div>
             <h2 className="font-serif text-balance text-4xl font-light leading-[1.05] sm:text-5xl lg:text-6xl">
-              CIISC: cinco frentes,
+              CIISC: cinco pilares,
               <br />
               uma <em className="italic text-accent">visão consolidada</em>.
             </h2>
@@ -272,32 +271,6 @@ export function EcosystemSection() {
               )
             })}
           </div>
-
-          <div className="mt-10 grid gap-8 border-t border-primary-foreground/15 pt-8 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-3">
-              <span className="font-mono text-[11px] tracking-[0.3em] text-accent">
-                {current.index} / {String(PILLARS.length).padStart(2, "0")}
-              </span>
-            </div>
-            <div className="lg:col-span-4">
-              <h3 className="font-serif text-3xl font-light leading-tight lg:text-4xl">{current.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-primary-foreground/65">{current.short}</p>
-            </div>
-            <div className="lg:col-span-5">
-              <p className="text-base leading-relaxed text-primary-foreground/85">{current.description}</p>
-              <a
-                href="#contato"
-                onClick={(event) => {
-                  event.preventDefault()
-                  openPillar(current)
-                }}
-                className="mt-8 inline-flex cursor-pointer items-center gap-2 border-b border-accent pb-1 text-xs tracking-[0.25em] uppercase text-accent transition-colors hover:border-primary-foreground hover:text-primary-foreground"
-              >
-                Saber mais
-                <ArrowUpRight className="size-3.5" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -347,10 +320,7 @@ export function EcosystemSection() {
               <div className="p-6 sm:p-8 md:p-10">
                 <div className="flex items-start justify-between gap-6">
                   <div>
-                    <p className="font-mono text-[11px] tracking-[0.3em] text-accent">
-                      {String(selectedOffering + 1).padStart(2, "0")} / 03
-                    </p>
-                    <h3 className="mt-5 font-serif text-4xl font-light leading-tight text-primary-foreground sm:text-5xl">
+                    <h3 className="font-serif text-4xl font-light leading-tight text-primary-foreground sm:text-5xl">
                       {currentOffering.title}
                     </h3>
                   </div>

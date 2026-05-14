@@ -51,7 +51,7 @@ export function AboutSection() {
           </div>
           <div>
             <p className="font-serif text-2xl text-primary leading-snug">
-              Ecossistema CIISC
+              Pilares CIISC
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Consultoria, Investimentos, Imóveis, Seguros e Consórcios

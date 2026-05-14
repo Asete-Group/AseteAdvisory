@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 
 const NAV_LINKS = [
   { label: "Sobre", href: "#sobre" },
-  { label: "Ecossistema", href: "#ecossistema" },
+  { label: "Pilares", href: "#pilares" },
   { label: "Como Atuamos", href: "#como-atuamos" },
   { label: "Cliente", href: "#cliente" },
   { label: "Diferenciais", href: "#diferenciais" },

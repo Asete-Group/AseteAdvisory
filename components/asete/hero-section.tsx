@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { WHATSAPP_CONTACT_URL } from "@/lib/contact"
 
 export function HeroSection() {
   return (
@@ -19,7 +18,7 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-20 pt-40 lg:px-10 lg:pb-28 lg:pt-44">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-6 pb-24 pt-36 lg:px-10 lg:pb-36 lg:pt-36">
         <div className="mb-10 flex items-center gap-4 text-primary-foreground/70">
           <span className="h-px w-12 bg-accent" aria-hidden="true" />
           <span className="text-[11px] tracking-[0.4em] uppercase">Consultoria Patrimonial</span>
@@ -39,12 +38,10 @@ export function HeroSection() {
 
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <a
-              href={WHATSAPP_CONTACT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#pilares"
               className="group inline-flex items-center gap-3 whitespace-nowrap bg-primary-foreground px-7 py-4 text-xs tracking-[0.14em] uppercase text-primary transition-colors hover:bg-accent hover:text-accent-foreground sm:tracking-[0.2em]"
             >
-              Solicitar análise personalizada
+              Conheça nossos pilares
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
@@ -58,7 +55,7 @@ export function HeroSection() {
 
         {/* Footer rail */}
         <div className="mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-primary-foreground/15 pt-8 text-[11px] tracking-[0.3em] uppercase text-primary-foreground/60">
-          <span>Ecossistema CIISC</span>
+          <span>Pilares CIISC</span>
           <div className="hidden md:flex items-center gap-8">
             <span>Consultoria</span>
             <span>Investimentos</span>
