@@ -209,7 +209,7 @@ export function EcosystemSection() {
         </div>
 
         <div className="mt-16">
-          <div className="mb-10 text-center">
+          <div className="mb-10 hidden text-center sm:block">
             <p className="font-serif text-4xl font-light leading-none text-primary-foreground sm:text-5xl lg:text-6xl">
               Tudo começa pelo:
             </p>
